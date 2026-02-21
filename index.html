@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador Tabla de Verdad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+<h1>Generador Tabla de Verdad</h1>
+<h2>By Mahia</h2>
+<h3>Operadores Lógicos</h3>
+<ul class="lista-operadores">
+    <li><strong>¬</strong> Negación: Invierte el valor de verdad.</li>
+    <li><strong>∧</strong> Conjunción: Verdadera si ambas son verdaderas.</li>
+    <li><strong>∨</strong> Disyunción: Verdadera si al menos una es verdadera.</li>
+    <li><strong>→</strong> Implicación: Falsa solo si V → F.</li>
+    <li><strong>↔</strong> Bicondicional: Verdadera si ambas tienen el mismo valor.</li>
+</ul>
+
+<input type="text" id="expresion" readonly>
+
+<div class="teclado">
+    <!-- Proposiciones -->
+    <button onclick="agregar('p')">p</button>
+    <button onclick="agregar('q')">q</button>
+    <button onclick="agregar('r')">r</button>
+    <button onclick="agregar('s')">s</button>
+
+    <!-- Operadores -->
+    <button onclick="agregar('¬')">¬</button>
+    <button onclick="agregar('∧')">∧</button>
+    <button onclick="agregar('∨')">∨</button>
+    <button onclick="agregar('→')">→</button>
+    <button onclick="agregar('↔')">↔</button>
+
+    <!-- Paréntesis -->
+    <button onclick="agregar('(')">(</button>
+    <button onclick="agregar(')')">)</button>
+
+    <!-- Edición -->
+    <button onclick="borrarUno()">⌫</button>
+    <button onclick="borrarTodo()">Borrar todo</button>
+    <button onclick="generarTabla()">Generar</button>
+</div>
+
+<div class="resultado" id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
